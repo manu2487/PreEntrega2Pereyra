@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Todas: indico tipo de letra a usar */
+@font-face {
+    font-family: "Figtree-Regular";
+    src: url(../fonts/Figtree-Regular.ttf);
+}
+
+body {    
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree-Regular";    
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white; /* Color de texto */
+}
+
+/*Todas: usan encabezado, engloba todo el Header */
+.encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*Todas: usan encabezado h1, para efectos en el logo */
+.encabezado h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+}
+
+/*Todas: usan resaltado para indicar en cual pagina estoy parado */
+.resaltado{
+    font-weight: bold;
+}
+
+/*Todas: usan class azul1 y azul2 usados para el logo */
+.azul1 {
+    color: #2acaea ;
+}
+.azul2 {
+    color: #00f;
+}
+
+/*Prestadores: usa class boton para ME INTERESA */ 
+.boton {
+    background-color: #7AB730;
+    color: #FAFAFA;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+.boton:hover {
+    background-color: #28a745;
+    color: #FAFAFA;
+    cursor: pointer;
+}
+.encabezado li {
+    list-style-type: none;
+    display: inline-block;
+}
+.encabezado li a {
+    
+    padding: 10px; /* Espacio alrededor del texto */    
+    transition: background-color 0.3s, font-size 0.3s; /* Transiciones suaves */
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    font-size: 1.5rem;
+}
+.encabezado li a:hover {
+    background-color: #c4e6ec; /* Cambio de color de fondo */
+    font-size: 1.6em; /* Aumento del tamaño del texto */    
+    color: #00f ;    
+    transition: background-color 1.0s ease;
+}
+
+/* Aquí tomo para el main: banner */
+.index {
+    text-align: left;
+    margin: 10vh;
+}
+.index h3, .planes h3 {
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+.index p, .planes p {
+    color: #212121;
+    font-size: 1.8rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.indexImagen img:hover{
+    filter: brightness(1.2); /* Aumenta el brillo */
+    transition: filter 0.4s ease;
+}
+
+/* Planes */
+.planes {
+    text-align: center;
+    margin: 10vh;    
+}
+
+.planes p {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.contenedorPlanes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #645959;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px; 
+}
+.tarjeta img {
+    max-width: 100%;
+}
+.tarjeta p {
+    margin: 10px 0;
+}
+.tarjeta h5 {
+    font-weight: 600;
+}
+.tarjeta button {
+    background-color: #1c7e92;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.tarjeta:hover{
+    border: 1px ridge #000000;
+}
+.tarjeta button:hover {
+    background-color: #28a745;
+    text-decoration: underline;
+}
+
+/* Prestadores */
+.contenedorPrestadores {
+    display: flex;
+    margin: 10vh;
+}
+
+/* Novedades */
+/* Estilos específicos para el carrusel */
+.carousel {
+    width: 70%;
+    margin: 0 auto; /* Centrar horizontalmente */
+    
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsión */
+}
+/* Cambiar color del texto en los captions del carrusel */
+.carousel-caption h5 {
+    color: #000000; /* Cambia a tu color deseado */
+    font-weight: 900;
+    font-size: 2rem;
+    transition: transform 0.2s ease-in-out;
+}
+.carousel-caption h5:hover,
+.carousel-caption p:hover {
+    transform: scale(1.2);
+}
+.carousel-caption p {
+    color: #000000; /* Cambia a tu color deseado */
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ajustes específicos para la vista móvil */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%; /* Ancho completo en móviles para mejor visibilidad */
+        display: block;
+    }
+    .carousel-item img {
+        height: 300px; /* Ajusta la altura del carrusel en móviles si es necesario */
+    }
+    .carousel-caption h5,
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+/* Ajustes para tablet */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .carousel-item img {
+        height: 400px; /* Ajusta la altura del carrusel en tablets si es necesario */
+    }
+}
+/* Ajustes para escritorio */
+@media (min-width: 1024px) {
+    .carousel-item img {
+        height: 500px; /* Ajusta la altura del carrusel en escritorios si es necesario */
+    }
+}
+/* Aquí termino todo el código para carrusel incluido responsive */
+
+/* Footer */
+.footer {
+    background-color: #212121;
+    color: #fff;
+    padding: 15px 0;
+}
+.footerContenido {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.infoContacto p,
+.redesSociales a {
+    margin: 5px 0;
+    font-size: 1.0rem;
+}
+.infoContacto a{
+    text-decoration: none; /* Quitar el subrayado al linkear el mapa de Google */
+    color: inherit; /* Mantener el color predeterminado */
+}
+.infoContacto i{
+    color: #2acaea;
+}
+.redesSociales a {
+    color: #2acaea;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+.redesSociales a:hover {
+    color: #2727f5 ;
+    transition: background-color 1.0s ease;
+}
+.footer i {
+    margin-right: 10px;
+}
+
+/* Lo hacemos responsive: primero considero la vista tablet y luego la vista movil  */
+/*Vista tablet*/
+/*768px hasta 1023px*/
+
+@media (max-width:1023px) {
+/*Header*/
+.encabezado {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+}
+.encabezado .boton {
+    display: none;
+}
+
+/*Banner*/
+.bannerContenido p {
+    font-size: 1.2rem
+}
+
+/*Planes*/
+.planes {
+    margin: 5vh;
+    font-size: 2rem;
+}
+.planes h3,
+.planes p {
+    font-size: inherit;
+}
+.contenedorPlanes {
+    grid-template-columns: 1fr 1fr;
+}
+
+/*Prestadores*/
+.contenedorPrestadores {
+    flex-direction: column;
+}
+
+/*Footer*/
+.footerContenido {
+    flex-direction: column;
+    text-align: center;
+}
+}
+
+/*Ajustes específicos para la vista móvil*/
+/*0 hasta 768px*/
+
+@media (max-width:768px) {
+/*Index */
+img{
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+/*Destinos */
+.contenedorDestinos{
+    grid-template-columns: 1fr;
+    }
+}
