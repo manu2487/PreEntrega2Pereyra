@@ -49,6 +49,23 @@ body {
     color: #00f;
 }
 
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción de 16:9 (ancho/alto) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /*Prestadores: usa class boton para ME INTERESA */ 
 .boton {
     background-color: #7AB730;
